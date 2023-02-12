@@ -1,0 +1,47 @@
+{
+    "name": "monitor-text-zoom",
+    "version": "1.0.0",
+    "description": "Adds classes to the DOM at specified text zoom levels",
+    "author": "Julian T Hill",
+    "license": "ISC",
+    "keywords": [
+        "text zoom",
+        "zoom text",
+        "accessibility",
+        "bootstrap"
+    ],
+    "main": "dist/monitor-text-zoom.js",
+    "devDependencies": {
+        "@babel/preset-env": "^7.19.4",
+        "@rollup/plugin-babel": "^6.0.2",
+        "@rollup/plugin-commonjs": "^23.0.2",
+        "@rollup/plugin-json": "^5.0.1",
+        "@rollup/plugin-node-resolve": "^15.0.1",
+        "@rollup/plugin-terser": "^0.4.0",
+        "cssnano": "^5.1.7",
+        "eslint": "^8.15.0",
+        "eslint-plugin-import": "^2.26.0",
+        "husky": "^8.0.1",
+        "lint-staged": "^12.4.1",
+        "node-sass": "^7.0.1",
+        "postcss": "^8.4.13",
+        "prettier": "^2.6.2",
+        "rollup": "^2.72.1",
+        "rollup-plugin-livereload": "^2.0.5",
+        "rollup-plugin-postcss": "^4.0.2"
+    },
+    "scripts": {
+        "dev": "rollup -c rollup.config.js --watch --environment BUILD:development --configLiveReload true",
+        "devNoLiveReload": "rollup -c rollup.config.js --watch --environment BUILD:development",
+        "build": "rollup -c rollup.config.js --environment BUILD:production",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint . --config .eslintrc.js --ignore-path .eslintignore --ext .js,.svelte --fix",
+        "format": "prettier --config .prettierrc --ignore-path .prettierignore --write .",
+        "release": "yarn lint && yarn format && yarn build",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "*.{js}": "eslint . --config '.eslintrc.js' --ignore-path '.eslintignore' --ext .js --fix",
+        "*.{js,css,scss,md}": "prettier --config '.prettierrc' --ignore-path '.prettierignore' --write"
+    }
+}

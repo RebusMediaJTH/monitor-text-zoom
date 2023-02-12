@@ -1,0 +1,20 @@
+.row {
+    margin-bottom: 10px;
+}
+
+body.tz-150 .change-colour {
+    color: red;
+}
+body.tz-170 .change-colour {
+    color: purple;
+}
+.change-colour-and-font-size.tz-query-match {
+    color: green;
+}
+.change-colour-and-font-size.change-font-size {
+    font-size: 50%;
+}
+
+.change-to-blue.tz-query-match {
+    color: blue;
+}

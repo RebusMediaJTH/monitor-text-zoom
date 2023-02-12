@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="../dist/monitor-text-zoom.css" rel="stylesheet" media="screen" />
+        <script type="text/javascript" src="../dist/monitor-text-zoom.js"></script>
+
+        <link href="bootstrap.4.6.2.min.css" rel="stylesheet" media="screen" />
+        <link href="demo.css" rel="stylesheet" media="screen" />
+        <script type="text/javascript" src="demo.js"></script>
+    </head>
+    <body>
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                demo(4);
+            });
+        </script>
+        <h1>Monitor text zoom demo: <span id="zoom-level"></span></h1>
+        <p>Stack at text zoom &gt;= 130%</p>
+        <div class="row stack-tz-130">
+            <div class="col-sm-6">Column 1</div>
+            <div class="col-sm-6">Column 2</div>
+        </div>
+        <p class="change-colour">Change my colour to red at text zoom &gt;= 150% and purple at &gt;= 170%</p>
+        <p class="change-colour-and-font-size" data-query-tz="gte:150 gte:200[change-font-size]">
+            Change my colour to green at text zoom &gt;= 150% & half my font size at text zoom &gt;= 200%
+        </p>
+        <p class="change-to-blue" data-query-tz="gte:150+lte:200|gte:300">Change to bold if text zoom &gt;= 150% and &lt;= 200% OR &gt;= 300%</p>
+    </body>
+</html>
