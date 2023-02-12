@@ -1,6 +1,6 @@
 {
     "name": "monitor-text-zoom",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Adds classes to the DOM at specified text zoom levels",
     "author": "Julian T Hill",
     "license": "ISC",
@@ -10,6 +10,11 @@
         "accessibility",
         "bootstrap"
     ],
+    "homepage": "https://github.com/RebusMediaJTH/monitor-text-zoom",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RebusMediaJTH/monitor-text-zoom.git"
+    },
     "main": "dist/monitor-text-zoom.js",
     "devDependencies": {
         "@babel/preset-env": "^7.19.4",
